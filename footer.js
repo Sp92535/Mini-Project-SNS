@@ -5,11 +5,11 @@ class SpecialFooter extends HTMLElement {
             <div class="col-6 col-md-2 mb-3">
                 <h5>Fitness</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="Fitness.html#Beginner"
-                            class="nav-link p-0 text-body-secondary">Beginner</a></li>
-                    <li class="nav-item mb-2"><a href="Fitness.html#Exercises"
-                            class="nav-link p-0 text-body-secondary">Exercises</a></li>
-                    <li class="nav-item mb-2"><a href="Fitness.html#Cardio" class="nav-link p-0 text-body-secondary">Cardio</a>
+                    <li class="nav-item mb-2"><a href="GymWorkout.html"
+                            class="nav-link p-0 text-body-secondary">Gym Workout</a></li>
+                    <li class="nav-item mb-2"><a href="HomeWorkout.html"
+                            class="nav-link p-0 text-body-secondary">Home Workout</a></li>
+                    <li class="nav-item mb-2"><a href="Cardio.html" class="nav-link p-0 text-body-secondary">Cardio</a>
                     </li>
                 </ul>
             </div>

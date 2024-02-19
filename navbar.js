@@ -20,9 +20,9 @@ class SpecialNav extends HTMLElement {
                         Fitness
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="Fitness.html">Beginner</a></li>
-                        <li><a class="dropdown-item" href="Fitness.html">Exercises</a></li>
-                        <li><a class="dropdown-item" href="Fitness.html">Cardio</a></li>
+                        <li><a class="dropdown-item" href="GymWorkout.html">Gym Workout</a></li>
+                        <li><a class="dropdown-item" href="HomeWorkout.html">Home Workout</a></li>
+                        <li><a class="dropdown-item" href="Cardio.html">Cardio</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
