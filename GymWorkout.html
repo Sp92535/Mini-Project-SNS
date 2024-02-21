@@ -24,11 +24,11 @@
             <h2 id="exp-selection">Select your Experience/Level</h2>
             <br>
             <label class="exp">
-                <input type="radio" name="level-selector" value="beginner">
+                <input type="radio" name="level-selector" id="beginner">
                 Beginner(Experience 0-2 months)
             </label>
             <label class="exp">
-                <input type="radio" name="level-selector" value="intermediate">
+                <input type="radio" name="level-selector" id="intermediate">
                 Experience >3 months
             </label>
         </form>
@@ -53,7 +53,19 @@
                             </video>
                         </div>
                     </section>
-
+                    <section class="inter flatdumbellpress">
+                        <label for="flatdumbellpress" onclick="reclick(this)">Flat Dumbell
+                            Press<span>&#x3e;</span></label>
+                        <input type="radio" name="chest-exe" id="flatdumbellpress">
+                        <div class="exe">
+                            Description
+                            <video class="d-block mx-lg-auto img-fluid" width="300px" height="300px" autoplay muted
+                                controls>
+                                <source src="flatdumbellpress.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </section>
                 </div>
             </li>
             <li>
@@ -130,6 +142,22 @@
             if (radioButton.checked)
                 setTimeout(() => radioButton.checked = false, 0)
         }
+        document.addEventListener("DOMContentLoaded", function () {
+            let x = document.getElementById('intermediate');
+            let y = document.getElementsByClassName('inter');
+
+            x.addEventListener('change', setInterval(() => {
+                if (x.checked) {
+                    for (let i = 0; i < y.length; i++) {
+                        y[i].style.display = 'block';
+                    }
+                } else {
+                    for (let i = 0; i < y.length; i++) {
+                        y[i].style.display = 'none';
+                    }
+                }
+            }, 0));
+        });
     </script>
 
     <!--FOOTER-->
