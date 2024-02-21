@@ -8,30 +8,7 @@
     <link rel="icon" href="IMG_2024.PNG" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <style>
-        .nemo {
-            font-size: 45px;
-            margin-top: 70px;
-            width: 100%;
-            text-align: center;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        }
-
-        .level {
-            text-align: center;
-        }
-
-        #exp-selection {
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        }
-
-        .exp {
-            font-size: 20px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin-left: 10px;
-            margin-right: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="gworkout.css">
 </head>
 
 <body>
@@ -47,20 +24,116 @@
             <h2 id="exp-selection">Select your Experience/Level</h2>
             <br>
             <label class="exp">
-                <input type="radio" name="color" value="beginner">
+                <input type="radio" name="level-selector" value="beginner">
                 Beginner(Experience 0-6 months)
             </label>
             <label class="exp">
-                <input type="radio" name="color" value="intermediate">
+                <input type="radio" name="level-selector" value="intermediate">
                 Intermediate(Experience 1-2 years)
             </label>
             <label class="exp">
-                <input type="radio" name="color" value="advanced">
+                <input type="radio" name="level-selector" value="advanced">
                 Advanced(Experience >4 years)
             </label>
         </form>
     </div>
+    <hr>
 
+    <div class="begi">
+        <ul id="types">
+            <li>
+                <label for="first" onclick="reclick(this)">Chest<span>&#x3e;</span></label>
+                <input type="radio" name="chest" id="first">
+                <div class="exe">
+                    <section class="pushups">
+                        <label for="pushups" onclick="reclick(this)">Push Ups<span>&#x3e;</span></label>
+                        <input type="radio" name="chest-exe" id="pushups">
+                        <div class="exe">
+                            A basic exercise for beginners to warmup your chest muscles.
+                            <video class="d-block mx-lg-auto img-fluid" width="700px" height="500px" autoplay muted
+                                controls>
+                                <source src="pushups.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </section>
+                </div>
+            </li>
+            <li>
+                <label for="second" onclick="reclick(this)">Shoulder<span>&#x3e;</span></label>
+                <input type="radio" name="shoulder" id="second">
+                <div class="exe">
+                    Overhead<br>
+                    Lateral <br>
+                    Front Raise
+                </div>
+            </li>
+            <li>
+                <label for="third" onclick="reclick(this)">Biceps<span>&#x3e;</span></label>
+                <input type="radio" name="bicep" id="third">
+                <div class="exe">
+                    Barbell Curls<br>
+                    Hammer Curls<br>
+                    Concentration Curls
+                </div>
+            </li>
+            <li>
+                <label for="fourth" onclick="reclick(this)">Triceps<span>&#x3e;</span></label>
+                <input type="radio" name="tricep" id="fourth">
+                <div class="exe">
+                    Skull Crushers<br>
+                    Tricep Pushdown<br>
+                    Kickbacks
+                </div>
+            </li>
+            <li>
+                <label for="fifth" onclick="reclick(this)">Back<span>&#x3e;</span></label>
+                <input type="radio" name="back" id="fifth">
+                <div class="exe">
+                    Pull Ups<br>
+                    Deadlift<br>
+                    Lat Rowing
+                </div>
+            </li>
+            <li>
+                <label for="sixth" onclick="reclick(this)">Legs<span>&#x3e;</span></label>
+                <input type="radio" name="legs" id="sixth">
+                <div class="exe">
+                    Squats<br>
+                    Leg Press<br>
+                    Leg Extension
+                </div>
+            </li>
+            <li>
+                <label for="seventh" onclick="reclick(this)">Abs<span>&#x3e;</span></label>
+                <input type="radio" name="abs" id="seventh">
+                <div class="exe">
+                    Sit Ups<br>
+                    Crunches<br>
+                    Romanian Twist
+                </div>
+            </li>
+            <li>
+                <label for="eighth" onclick="reclick(this)">Workout Plan<span>&#x3e;</span></label>
+                <input type="radio" name="wplan" id="eighth">
+                <div class="exe">
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+    <script>
+        const reclick = (label) => {
+            console.log("Label clicked");
+            var radioButton = label.nextElementSibling;
+            console.log(radioButton.checked);
+            if (radioButton.checked)
+                setTimeout(() => radioButton.checked = false, 0)
+        }
+    </script>
 
     <!--FOOTER-->
     <special-footer></special-footer>
